@@ -50,7 +50,7 @@ def reproducirMusicaVideo(file):
         for f in file:
             vlc_instance = vlc.Instance()
             player = vlc_instance.media_player_new()
-            media = vlc_instance.media_new(file)
+            media = vlc_instance.media_new(f)
             player.set_media(media)
             player.play()
             time.sleep(1.5)
@@ -82,7 +82,7 @@ def reproducirUSB():
         #es olbigatorio poner un indice al llamar la funcion
             #for x in range(len(varMusicFiles)):
                 #reproducirMusicaVideo(varMusicFiles[x])
-            reproducirMusicaVideo(varMusicFiles[0])	
+            reproducirMusicaVideo(varMusicFiles)	
     elif not varVideoFiles and not varMusicFiles:#si no hay archivos de video se cargan fotos
         reproducirFotos(varPhotoFiles,tiempoPorSlide)
     elif not varPhotoFiles and not varMusicFiles:#si no hay archivos de fotos ni musica se cargan videos
