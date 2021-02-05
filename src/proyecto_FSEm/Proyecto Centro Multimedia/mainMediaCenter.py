@@ -53,7 +53,7 @@ def reproducirMusicaVideo(file):
             player.play()
             time.sleep(1.5)
             duration = player.get_length() / 1000
-            time.sleep(duracion)
+            time.sleep(duration)
             player.stop()
     player.close()
 #>>>>>>> Thomas
@@ -75,7 +75,7 @@ def reproducirUSB():
             reproducirFotos(varPhotoFiles,tiempoPorSlide)
         elif opcionReproduccion == '2':
             print(len(varVideoFiles))
-            reproducirMusicaVideo(varVideoFiles[0])	
+            reproducirMusicaVideo(varVideoFiles)	
         elif opcionReproduccion == '3':
         #es olbigatorio poner un indice al llamar la funcion
             #for x in range(len(varMusicFiles)):
