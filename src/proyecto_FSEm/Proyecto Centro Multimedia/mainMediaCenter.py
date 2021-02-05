@@ -46,16 +46,18 @@ def reproducirFotos(mymedia,tiempo):
 	#Media.close()#IMPORTANTE, debe cerrarse el reproductor
 
 def reproducirMusicaVideo(file):
-	for f in file:
-	    vlc_instance = vlc.Instance()
-	    player = vlc_instance.media_player_new()
-	    media = vlc_instance.media_new(file)
-	    player.set_media(media)
-	    player.play()
-	    time.sleep(1.5)
-	    duration = player.get_length() / 1000
-	    time.sleep(duration)
-	    player.close()
+    while True:
+        for f in file:
+            vlc_instance = vlc.Instance()
+            player = vlc_instance.media_player_new()
+            media = vlc_instance.media_new(file)
+            player.set_media(media)
+            player.play()
+            time.sleep(1.5)
+            duration = player.get_length() / 1000
+            time.sleep(10)
+            player.stop()
+    player.close()
 #>>>>>>> Thomas
 
 
