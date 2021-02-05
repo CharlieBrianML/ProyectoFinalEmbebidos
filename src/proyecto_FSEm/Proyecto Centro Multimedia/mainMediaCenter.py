@@ -55,7 +55,7 @@ def reproducirMusicaVideo(file):
             player.play()
             time.sleep(1.5)
             duration = player.get_length() / 1000
-            time.sleep(10)
+            time.sleep(duracion)
             player.stop()
     player.close()
 #>>>>>>> Thomas
