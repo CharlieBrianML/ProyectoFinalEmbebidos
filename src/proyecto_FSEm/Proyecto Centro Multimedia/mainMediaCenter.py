@@ -1,3 +1,14 @@
+
+#!/usr/bin/env python
+#
+# Fundamentos de Sistemas Embebdios - UNAM, FI, 2021-1
+# Proyecto Final: Centro Multimedia
+#
+#Integrantes: Arias Pelayo Thomas.A, Monterrubio López Charlie R.,Jorge Luis Rivas Rodríguez
+# Instructiones:
+# Correr el código y poner el path correcto de los archivos en líneas 76-80
+# Correr el código cada vez que se quiere seleccionar una nueva opción
+
 import vlc
 import time
 import glob
@@ -17,19 +28,6 @@ def reproducirFotos(mymedia,tiempo):
         player.play_item_at_index(index)
         time.sleep(tiempo)#el tiempo de reproduccion de las fotos, videos o musica
 #Media.close()#IMPORTANTE, debe cerrarse el reproductor
-
-def reproducirMusicaVideo(file):
-    for f in file:
-        vlc_instance = vlc.Instance()
-        player = vlc_instance.media_player_new()
-        media = vlc_instance.media_new(file)
-        player.set_media(media)
-        player.play()
-        time.sleep(1.5)
-        duration = player.get_length() / 1000
-        time.sleep(duration)
-        player.close()
-#=======
 
 tiempoPorSlide = 4
 def reproducirFotos(mymedia,tiempo):
